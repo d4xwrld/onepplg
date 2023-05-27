@@ -48,6 +48,7 @@ body{
     text-shadow: 3px 3px 10px grey;
     bottom: -100px;
 }
+
 .paralax img#meteorid{
     z-index: 100;
 }
