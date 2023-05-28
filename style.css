@@ -1,74 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-body{
-    background: linear-gradient(black, #38073b);
-    font-family: 'Acme', sans-serif;
+body {
+  background: linear-gradient(black, #38073b);
+  font-family: "Acme", sans-serif;
 }
 
-.paralax{
-    position: relative;
-    width: 100%;
-    height: 200vh;
-    padding: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.paralax {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  padding: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .paralax::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top,#c4c2c3,transparent );
-    z-index: 1000;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #c4c2c3, transparent);
+  z-index: 1000;
 }
-.paralax img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.paralax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-#text{
-    position: absolute;
-    font-size: 4.8em;
-    color: white;
-    letter-spacing: 2px;
-    text-align: center;
-    text-shadow: 3px 3px 10px grey;
-    bottom: -100px;
-}
-
-.paralax img#meteorid{
-    z-index: 100;
+#text {
+  position: absolute;
+  font-size: 4.8em;
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 3px 3px 10px grey;
+  bottom: -100px;
 }
 
-#button{
-    position: absolute;
-    font-size: 1em;
-    color: black;
-    background-color: white;
-    padding: 10px 50px;
-    border-radius: 20px;
-    text-decoration: none;
-    transform: translateY(100px);
-    bottom: -100px;
+.paralax img#meteorid {
+  z-index: 100;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;;
+}
+
+#button {
+  position: absolute;
+  font-size: 1em;
+  color: black;
+  background-color: white;
+  padding: 10px 50px;
+  border-radius: 20px;
+  text-decoration: none;
+  transform: translateY(100px);
+  bottom: -100px;
 }
 .description {
-    position: relative;
-    padding:10em;
-    background-color: #c4c2c3;
+  position: relative;
+  padding: 10em;
+  background-color: #c4c2c3;
 }
 .description p {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
+
+#outerCircleText {
+
+  font-style: consolas;
+  font-weight: bold;
+  font-family: 'comic sans ms', verdana, arial;
+  color: white;
+  
+  position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;}
+  #outerCircleText div {position: relative;}
+  #outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+  
