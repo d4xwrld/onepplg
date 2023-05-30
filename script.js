@@ -7,9 +7,9 @@ let button = document.getElementById("button");
 window.addEventListener("scroll", function () {
   let value = window.scrollY;
   stars.style.left = value * 0.25 + "px";
-  rocket.style.top = value * -0.5 + "px";
-  text.style.marginBottom = value * 1 + "px";
-  button.style.marginBottom = value * 1 + "px";
+  rocket.style.top = value * -0.10 + "px";
+  text.style.marginBottom = value * 2.3 + "px";
+  button.style.marginBottom = value * 2.3 + "px";
 });
 
 function tb5_makeArray(n) {
