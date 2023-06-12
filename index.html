@@ -6,8 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>X PPLG 1's Web</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Div custom alert box dari resource HTML yang telah diberikan -->
+  <div class="alert alert-dark alert-container">
+    <div class="icon__wrapper">
+      <span class="material-icons">warning</span>
+    </div>
+    <p>Mohon untuk menyalakan <a href="https://petunjuk.id/versi-desktop-chrome-android/" target="_blank">Mode Dekstop</a> Di Perangkat anda untuk pengalaman yang lebih baik :D    -dev R</p>
+    <span class="mdi mdi-open-in-new open"></span>
+    <span class="mdi mdi-close close"></span>
+  </div>
+  <script>
+// Mendapatkan elemen-elemen yang diperlukan
+const alertBox = document.querySelector('.alert');
+const closeButton = document.querySelector('.close');
 
-    <!-- Font Awesome CSS -->
+// Fungsi untuk menampilkan kotak alert
+function showAlert() {
+  alertBox.style.display = 'flex';
+}
+
+// Fungsi untuk menyembunyikan kotak alert
+function hideAlert() {
+  alertBox.style.display = 'none';
+}
+
+// Memeriksa apakah fitur desktop mode aktif
+function isDesktopMode() {
+  return window.matchMedia('(min-width: 1024px)').matches;
+}
+
+// Memeriksa status fitur desktop mode saat halaman dimuat
+window.addEventListener('DOMContentLoaded', function() {
+  if (!isDesktopMode()) {
+    showAlert();
+  }
+});
+
+// Menyembunyikan kotak alert saat tombol close diklik
+closeButton.addEventListener('click', hideAlert);
+
+// Memeriksa perubahan ukuran layar saat pengguna mengubahnya
+window.addEventListener('resize', function() {
+  if (!isDesktopMode()) {
+    showAlert();
+  } else {
+    hideAlert();
+  }
+});
+
+  </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
