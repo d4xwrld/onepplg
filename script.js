@@ -12,7 +12,44 @@ window.addEventListener("scroll", function () {
   button.style.marginBottom = value * 2.3 + "px";
 });
 
+//PENGECEK POTRAIT
+// Mendapatkan elemen-elemen yang diperlukan
+const alertBox = document.querySelector('.alert');
+const closeButton = document.querySelector('.close');
 
+// Fungsi untuk menampilkan kotak alert
+function showAlert() {
+  alertBox.style.display = 'flex';
+}
+
+// Fungsi untuk menyembunyikan kotak alert
+function hideAlert() {
+  alertBox.style.display = 'none';
+}
+
+// Memeriksa apakah fitur desktop mode aktif
+function isDesktopMode() {
+  return window.matchMedia('(min-width: 700px)').matches;
+}
+
+// Memeriksa status fitur desktop mode saat halaman dimuat
+window.addEventListener('DOMContentLoaded', function() {
+  if (!isDesktopMode()) {
+    showAlert();
+  }
+});
+
+// Menyembunyikan kotak alert saat tombol close diklik
+closeButton.addEventListener('click', hideAlert);
+
+// Memeriksa perubahan ukuran layar saat pengguna mengubahnya
+window.addEventListener('resize', function() {
+  if (!isDesktopMode()) {
+    showAlert();
+  } else {
+    hideAlert();
+  }
+});
 
 function tb5_makeArray(n) {
   this.length = n;
